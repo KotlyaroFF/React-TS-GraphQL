@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Inter';
+    src: url("resources/fonts/Inter-SemiBold.ttf") format("TrueType");
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url("resources/fonts/Inter-Bold.ttf") format("TrueType");
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url("resources/fonts/OpenSans-ExtraBold.ttf") format("TrueType");
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+}
+
+@layer components {
+    .b-r {@apply border-r  border-r-gray-200}
+    .b-l {@apply border-l border-l-gray-200}
+    .b-t {@apply border-t border-t-gray-200}
+    .b-b {@apply border-b border-b-gray-200}
+    .animate {@apply transition ease-in-out delay-150 duration-500}
+    .animate-icons{@apply transition ease-in-out delay-150 hover:scale-110 duration-300}
+}
+
+/* Editor styles */
+.ce-toolbar__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: -30px;
+}
+
+@media screen and (min-width: 768px) {
+    .ce-toolbar__actions {
+        left: -38px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .ce-toolbar__actions {
+        flex-direction: row;
+        justify-content: center;
+        left: -58px;
+    }
+}
+
+.codex-editor--narrow .ce-toolbar__actions {
+    right: 100%;
+}
+
+.ce-toolbar__content .ce-toolbar__actions .ce-toolbox {
+    left: 0;
+    right: auto;
+}
+div#editorJS h1 {
+    font-size: 36px;
+    line-height: 1em;
+}
+div#editorJS h2 {
+    font-size: 32px;
+}
+div#editorJS h3 {
+    font-size: 24px;
+}
+div#editorJS h4 {
+    font-size: 20px;
+}
+div#editorJS h5 {
+    font-size: 16px;
+}
+div#editorJS h6 {
+    font-size: 14px;
+}
+div#editorJS .ce-paragraph {
+    font-size: 16px;
+    font-weight: normal;
+}
+div#editorJS .ce-header {
+    padding: .5rem 0;
+}
+
+/* common styles */
+/*.main-content {*/
+/*    height: 100%;*/
+/*}*/
+
+@media screen and (min-width: 640px) {
+    .main-content {
+        height: calc(100vh - 80px);
+        /**/
+    }
+}
